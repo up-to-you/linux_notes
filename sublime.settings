@@ -1,0 +1,19 @@
+#Boxy Theme
+
+{
+	"animation_enabled": false,
+	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"scroll_speed": 17,
+	"theme": "Boxy Monokai.sublime-theme",
+	"theme_tab_selected_overlined": true,
+	"tree_animation_enabled": false
+}
