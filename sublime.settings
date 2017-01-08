@@ -1,19 +1,20 @@
-#Boxy Theme
-
 {
 	"animation_enabled": false,
-	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme",
-	"font_options":
-	[
-		"subpixel_antialias"
-	],
-	"font_size": 10,
+	"auto_complete_delay": 1,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"draw_white_space": "none",
+	"enable_hexadecimal_encoding": false,
+	"fallback_encoding": "Cyrillic (Windows 1251)",
+	"font_face": "",
+	"font_size": 9,
+	"hot_exit": false,
+	"hotd_exit": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"scroll_speed": 17,
-	"theme": "Boxy Monokai.sublime-theme",
-	"theme_tab_selected_overlined": true,
-	"tree_animation_enabled": false
+	"scroll_speed": 17.0,
+	"theme": "Default.sublime-theme",
+	"tree_animation_enabled": false,
+	"update_check": false
 }
