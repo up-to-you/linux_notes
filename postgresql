@@ -1,2 +1,0 @@
-for startup debug under postgres user : 
-/usr/lib/postgresql/9.5/bin/postgres -d 3 -D /var/lib/postgresql/9.5/main -c config_file=/etc/postgresql/9.5/main/postgresql.conf
