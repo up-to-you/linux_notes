@@ -1,3 +1,1 @@
-# README #
-
-### Useful linux and related apps settings ###
+### Useful linux and some related apps settings ###
