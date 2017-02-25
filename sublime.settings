@@ -1,12 +1,12 @@
 {
 	"animation_enabled": false,
 	"auto_complete_delay": 1,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"draw_white_space": "none",
 	"enable_hexadecimal_encoding": false,
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"font_face": "",
-	"font_size": 9,
+	"font_size": 11,
 	"hot_exit": false,
 	"hotd_exit": true,
 	"ignored_packages":
@@ -14,7 +14,6 @@
 		"Vintage"
 	],
 	"scroll_speed": 17.0,
-	"theme": "Default.sublime-theme",
 	"tree_animation_enabled": false,
 	"update_check": false
 }
