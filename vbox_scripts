@@ -1,0 +1,2 @@
+example running excel from host-OS
+VBoxManage guestcontrol win7 --username 'VM-SAB' --verbose run --wait-stdout --wait-stderr 'C:\Program Files\Microsoft Office\Office14\EXCEL.EXE' "D:\IdeaProjects\nps-integration-layer\test\testdata\ППС тесты.xlsx" &
