@@ -1,0 +1,9 @@
+sudo add-apt-repository ppa:glasen/freetype2
+update => upgrade
+Crossover : 'enhanced performance graphics' option
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+FontSmoothing 0x00000002
+FontSmoothingGamma 0x00000578
+FontSmoothingType 0x00000002
+FontSmoothingOrientation 0x00000001
