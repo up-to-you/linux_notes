@@ -1,5 +1,5 @@
 sudo add-apt-repository ppa:glasen/freetype2
-update => upgrade
+update => upgrade to 2.8 or later
 Crossover : 'enhanced performance graphics' option
 
 [HKEY_CURRENT_USER\Control Panel\Desktop]
