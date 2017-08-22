@@ -1,0 +1,29 @@
+# find right input device : /dev/input/event<X>, then test keyscan to remap
+
+sudo evtest /dev/input/event7
+
+# result -> something like 'Input device name: "Apple Inc. Apple Keyboard"'
+# pay attention to (MSC_SCAN), value 70068  <- F13 key
+
+udevadm info /dev/input/event7 | grep ID_VENDOR_ID
+
+# xargs grep -i <ID_VENDOR_ID>
+
+find /sys -name *modalias | xargs grep -i 05ac
+
+# find ID like b0003v05ACp0250e0111-e0  where 05AC - vendor ID
+
+cd /etc/udev/hwdb.d
+sudo nano 98-apple-keyboard.hwdb
+
+# pay attention to space before KEYBOARD_... and wildcard for ID :
+
+evdev:input:b0003v05ACp0250*
+ KEYBOARD_KEY_70068=sysrq      # F13: Print
+
+# update new settings
+
+sudo udevadm hwdb --update
+sudo udevadm trigger
+
+# USE !
