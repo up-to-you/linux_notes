@@ -1,3 +1,7 @@
+### Useful linux and some related apps settings ###
+
+***HOT***
+
 https://www.reddit.com/r/Dell/comments/5y3rii/xps_9560_battery_life_optimization_and_fan/
 
 ***SET A PREVIOUS ACPI REVISION FLAG TO WORKAROUND SOME TROUBLES***
@@ -30,7 +34,7 @@ I've found the command to turn off the dGPU on "acpi-call-dkms" package examples
 If you run the script it executes various calls to find which one actually works on your computer. On my XPS 9560 the command to turn the nvidia 1050 off is:
 echo '_SB.PCI0.PEG0.PEGP._OFF' | sudo tee /proc/acpi/call
 update: thanks to jlarky for explaining how to correctly run the command from an unprivileged user shell
-The effect of the command is really evident, the temperature is about 10Â° lower, the predicted battery time to empty is raised a few hours while it doesn't create any problem with the track pad or anything.
+The effect of the command is really evident, the temperature is about 10° lower, the predicted battery time to empty is raised a few hours while it doesn't create any problem with the track pad or anything.
 update: thanks to jseris for sharing how to automatically turn the dGPU off at startup
 To automate on startup, do the following as root:
 echo acpi_call > /etc/modules-load.d/acpi_call.conf
@@ -48,7 +52,7 @@ WantedBy=graphical.target
 Enable the new unit file:
 systemctl enable /usr/lib/systemd/user/dgpu-off.service
 source: https://gist.github.com/jseris/a740f6a3fb0d18064e26dc66f9be4f1d , tested with kernel: 4.9.20-040920-generic and 4.10.0-14-generic
-After a reboot cat /tmp/nvidia-off should report 0x0called and the idle temp should be about 10Â° lower.
+After a reboot cat /tmp/nvidia-off should report 0x0called and the idle temp should be about 10° lower.
 
 ***GRUB***
 
