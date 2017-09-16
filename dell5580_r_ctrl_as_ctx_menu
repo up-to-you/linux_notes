@@ -1,0 +1,7 @@
+nano /home/linux-own/.config/autostart/r_ctrl_to_context_menu.desktop
+
+
+[Desktop Entry]
+Name=r_ctrl_to_context_menu
+Exec=bash -c 'sleep 3 && xmodmap -e "keycode 105 = Menu NoSymbol Menu"'
+Type=Application
