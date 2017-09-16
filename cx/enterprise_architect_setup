@@ -1,0 +1,24 @@
+1. Crossover
+2. EA distrib : https://yadi.sk/d/2aAoIWF8sKB4f
+3. При установке в кроссовере выбираем:
+    - Приложение - enterprise architect 12.x
+    - указываем msi инсталятор из дистриба
+    - bottle выбираем win 8!
+4. ПКМ по ботлу - install software into bottle
+5. Ищем Microsoft JET 4.0 Service Pack 8, ставимse
+6. Запускаем EA , заходим - TOOLS - Options - ставим галку use JET 4.0
+7. Перезапускаем EA (можно для верности жмакнуть на ботинок - рестарт OS в Crossover), проверяем, что галка не слетела.
+8. Качаем http://sparxsystems.com/bin/EABase_JET4.zip , распаковываем
+9. В EA - open project / import project из .eap файла.
+10. Качаем SlikSvn https://sliksvn.com/pub/
+https://sliksvn.com/pub/Slik-Subversion-1.6.9-win32.msi
+11. Переносим msi в корень логического диска C нашей бутылки.
+12. По инструкции устанавливаем subversion до пункта 8 включительно: http://www.sparxsystems.com/enterprise_architect_user_guide/12/projects_and_teams/wine_subversion_environment.html
+13. Не спроста этот пункт под номер 13 : в директории users / application data / subversion / server настраиваем наш любимый прокси.
+14. Переходим в директорию на логическом диске C, куда планируется импорт проекта SVN EA.
+14. Переход к пункту 9 инструкции на шаге 12. Команды запускаем по очереди, user / pass svn спросит сам:
+    - svn checkout "https://vcs.lanit.ru/svn/cbea"
+    - пассворд для пользователя crossover вбивайте на своё усмотрение, я не стал эксперементировать и просто ввёл доменный пасс.
+15. В EA - настраиваем Version Control как описано в Jira : https://wiki.lanit.ru/pages/viewpage.action?pageId=70353009 (svn.exe разумеется указываем из ...sliksvn/bin/svn.exe)
+16. ПКМ по views (которые были созданы при импорте EABase_JET4)  в правчой части экрана - Package Control - import a model branch
+17. Юзаем ))
