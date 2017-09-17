@@ -74,3 +74,5 @@ sudo update-initramfs -u
 
 # after reboot check : there mustn't be any result, because kernel mustn't load this module !
 lsmod | grep -i nouveau
+
+# DON'T USE POWERTOP OR ANY SUGGESTED TUNABLES FEATURES ! IT'S SUCKS !
