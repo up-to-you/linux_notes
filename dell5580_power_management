@@ -64,5 +64,12 @@ sudo update-grub
 /etc/rc.local
 rfkill block bluetooth
 
-***OPTIONAL***
+***MUST_HAVE***
 sudo apt purge --auto-remove xserver-xorg-video-nouveau
+
+sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+blacklist nouveau
+
+sudo update-initramfs -u
+
+# after reboot check : lsmod | grep -i nouveau
