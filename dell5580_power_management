@@ -72,4 +72,5 @@ blacklist nouveau
 
 sudo update-initramfs -u
 
-# after reboot check : lsmod | grep -i nouveau
+# after reboot check : there mustn't be any result, because kernel mustn't load this module !
+lsmod | grep -i nouveau
