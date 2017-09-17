@@ -84,3 +84,24 @@ sudo nano /etc/modules
 bbswitch load_state=0
 
 update-initramfs -u
+
+# LAST SPURT -> systemctl service for nvidia anihilation after hibernate
+sudo nano /etc/systemd/system/kill_nvidia.service
+
+[Unit]
+Description=Kill Nvidia
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+[Service]
+ExecStart=/bin/sh -c "echo '\\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call; cat /proc/acpi/call > /tmp/nvidia-off"
+
+[Install]
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target
+
+sudo systemctl enable kill_nvidia.service
+
+systemctl status kill_nvidia.service
