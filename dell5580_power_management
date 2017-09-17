@@ -76,3 +76,11 @@ sudo update-initramfs -u
 lsmod | grep -i nouveau
 
 # DON'T USE POWERTOP OR ANY SUGGESTED TUNABLES FEATURES ! IT'S SUCKS !
+
+# NEXT : bbswitch is our solution !
+sudo apt install bbswitch-dkms
+
+sudo nano /etc/modules
+bbswitch load_state=0
+
+update-initramfs -u
