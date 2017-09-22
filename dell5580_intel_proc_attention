@@ -1,0 +1,6 @@
+OS: Ubuntu 17.04
+BIOS: v 1.4.3
+SETTINGS: use proprietary intel firmware (Software -> Additional drivers)
+
+ALL THIS SETTINGS ARE RELATED TO FAN SPEED CONTROLLING!
+DON'T USE 1.5.3 BIOS VERSION !
