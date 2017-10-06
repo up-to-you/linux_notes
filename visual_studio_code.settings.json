@@ -1,4 +1,12 @@
- // Place your key bindings in this file to overwrite the defaults
+{
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false
+}
+// Place your key bindings in this file to overwrite the defaults
 [
     {
         "key": "shift+alt+p",
