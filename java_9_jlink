@@ -1,0 +1,1 @@
+ ~/DEV_DISTRO/jdk-9/bin/jlink --module-path ~/DEV_DISTRO/jdk-9/jmods:. --add-modules fx.desktop --output ~/fx-out --launcher start=fx.desktop/fx.desktop.formula.repair.model.Desktop --strip-debug --compress=2
