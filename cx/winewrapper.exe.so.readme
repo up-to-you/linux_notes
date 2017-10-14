@@ -1,1 +1,6 @@
+# license evaluation flag
+~/.cxoffice/Laptop_Bundle/.eval
+# ??? license evaluation timestamp ???
+~/.cxoffice/Laptop_Bundle/.update-timestamp 
+
 DON'T FORGET TO SET APPROPRIATE PERMISSIONS AFTER COPYING TO /opt/cxoffice/lib/wine && /opt/cxoffice/lib64/wine
