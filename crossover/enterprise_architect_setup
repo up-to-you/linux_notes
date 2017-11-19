@@ -1,0 +1,13 @@
+# Installing Enterprise architect via crossover  
+# 1. Get EA distrib https://yadi.sk/d/2aAoIWF8sKB4f
+# 2. Crossover :    bottle - win 8 !
+#                   installation type - enterprise architect 12.x
+# 3. After installation complete, need to install Microsoft JET 4.0 Service Pack 8
+# 4. EA : tools -> options -> JET 4.0
+# 5. Restart Crossover Bottle
+# 6. Create (import project) project from EA template http://sparxsystems.com/bin/EABase_JET4.zip 
+# 7. Need to install SlikSvn into the same bottle https://sliksvn.com/pub/
+#    https://sliksvn.com/pub/Slik-Subversion-1.6.9-win32.msi
+# 8. Instruction for further installation http://www.sparxsystems.com/enterprise_architect_user_guide/12/projects_and_teams/wine_subversion_environment.html
+# 9. svn checkout $YOUR_REPO
+# 10. EA : Version Control Settings -> setup local svn repo

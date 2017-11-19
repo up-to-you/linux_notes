@@ -1,0 +1,11 @@
+# freetype version > 2.8 is mandatory for better fonts smoothing
+sudo add-apt-repository ppa:glasen/freetype2
+update && upgrade
+
+# Crossover menu : turn on 'enhanced performance graphics' option
+# + regedit :
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+FontSmoothing 0x00000002
+FontSmoothingGamma 0x00000578
+FontSmoothingType 0x00000002
+FontSmoothingOrientation 0x00000001
