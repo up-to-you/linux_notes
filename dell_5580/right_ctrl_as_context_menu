@@ -9,3 +9,4 @@ Exec=bash -c 'sleep 3 && xmodmap -e "keycode 105 = Menu NoSymbol Menu"'
 Type=Application
 
 # not to forget to grant privilegies
+#!
