@@ -1,3 +1,4 @@
+
 # session_1
 sudo apt install lm-sensors
 sensors-detect
