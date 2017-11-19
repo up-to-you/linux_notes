@@ -1,8 +1,7 @@
-# this solution sucks, because probably ubuntu/xkb overrides this settings.
+# THIS SOLUTION SUCKS, because probably ubuntu/xkb overrides this settings.
 # need to use xkb to achive this behavior 
 
 nano /home/linux-own/.config/autostart/r_ctrl_to_context_menu.desktop
-
 
 [Desktop Entry]
 Name=r_ctrl_to_context_menu

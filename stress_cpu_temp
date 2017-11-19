@@ -1,6 +1,8 @@
+# session_1
 sudo apt install lm-sensors
 sensors-detect
 watch -n 1 "sensors && cat /proc/cpuinfo | grep MHz"
 
+# session_2
 sudo apt install stress
 stress -c 8

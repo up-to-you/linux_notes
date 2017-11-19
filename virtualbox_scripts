@@ -1,0 +1,2 @@
+# example running ms-excel from HOST-OS
+VBoxManage guestcontrol $VM_NAME --username '$VM_USER' --password "$VM_PASSWORD" --verbose run --wait-stdout --wait-stderr 'C:\Program Files\Microsoft Office\Office14\EXCEL.EXE' "$PATH_TO_XLSX_FILE" &

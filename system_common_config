@@ -1,0 +1,11 @@
+# /etc/sysctl.conf
+
+# redundant swap if ram is enough
+vm.swappiness = 0
+# nervous ipv6
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1 
+# limit of files changes in directories, that linux can listen simultaneously
+# useful for such greedy tools as IDEA
+fs.inotify.max_user_watches = 524288
