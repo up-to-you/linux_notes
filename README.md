@@ -1,1 +1,0 @@
-### Useful linux and some related apps settings ###
