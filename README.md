@@ -1,1 +1,1 @@
-![Alt text](linux.jpg?raw=true "Title")
+<img src="linux.jpg" width="100%" height="350px">
