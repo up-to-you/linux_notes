@@ -107,3 +107,7 @@ WantedBy=hybrid-sleep.target
 sudo systemctl enable kill_nvidia.service
 
 systemctl status kill_nvidia.service
+
+#!
+# after the above adjustments the average energy consumption during coding / browsing / rare build tasks is about 8-9w/h
+#!
