@@ -1,0 +1,19 @@
+# .desktop file sample, that uses win7_vbox.sh
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=VM_WIN_BOX
+Comment=VM_WIN_BOX_COMMENT
+Type=Application
+Exec=~/.local/share/applications/win7_vbox.sh
+Icon=~/.local/share/applications/virtualbox-vbox-512px.png
+
+# win7_vbox.sh sample
+# start vm
+VBoxManage startvm "win7"
+
+# start headless
+VBoxManage startvm "win7" --type headless
+
+# shutdown vm
+VBoxManage controlvm "win7" poweroff
