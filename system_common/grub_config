@@ -6,6 +6,9 @@
 # --- 
 # remember last choice
 GRUB_DEFAULT=saved
+# for specific menu entry
+# cat /boot/grub/grub.cfg | grep menuentry
+# GRUB_DEFAULT="1>4"
 GRUB_SAVEDEFAULT=true
 # ---
 GRUB_HIDDEN_TIMEOUT=0
