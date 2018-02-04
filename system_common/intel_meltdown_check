@@ -1,0 +1,2 @@
+# check of intel meltdown security patch
+grep CONFIG_PAGE_TABLE /boot/config*
