@@ -4,6 +4,8 @@
 # SET A PREVIOUS ACPI REVISION FLAG TO WORKAROUND SOME TROUBLES
 # Thanks to the mighty ArchLinux buddies I've found the trick that workarounds a few important troubles with ACPI support. (source: https://bbs.archlinux.org/viewtopic.php?id=223056). As far as I understand the most recent Linux kernels started to support ACPI revision 6 but for some reason it still has problems with the XPS 9560. Applying this setting on Ubuntu 16.04.2 is simple as adding a kernel boot parameter to grub, as the Ubuntu kernel is already compiled with the CONFIG_ACPI_REV_OVERRIDE_POSSIBLE flag enabled (at least, it is on the official hwe kernel version 4.10). I haven't found any drawback while the setting fixes and optimizes important stuff.
 # Edit /etc/default/grub and add acpi_rev_override=5 to your grub default cmdline, the line should look similar to this
+# acpi_rev_override IS VERY IMPORTANT !!! 
+# FOR AN EXAMPLE : UBUNTU 16.04.3 + 4.13.0 KERNEL + TLP + ACPI + ACPI_DKMS RESULTS IN NONDETERMINISTIC FREEZES 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=5"
 
 # don't forget to run 
