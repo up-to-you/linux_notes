@@ -1,0 +1,12 @@
+# check of intel meltdown security patch
+grep CONFIG_PAGE_TABLE /boot/config*
+
+# disable isolation
+sudo nano /etc/default/grub
+# append pti=off to :
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pti=off"
+sudo update-grub
+
+sudo reboot
+# check:
+grep CONFIG_PAGE_TABLE /boot/config*
