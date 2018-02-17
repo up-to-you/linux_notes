@@ -73,7 +73,9 @@ sudo apt purge --auto-remove xserver-xorg-video-nouveau
 
 sudo nano /etc/modprobe.d/blacklist-nouveau.conf
 blacklist nouveau
-sudo echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
+sudo sh -c "echo 'blacklist nvidia' >> /etc/modprobe.d/blacklist.conf"
+
+cat /var/log/boot.log
 
 sudo update-initramfs -u
 
@@ -85,10 +87,19 @@ lsmod | grep -i nouveau
 # NEXT : bbswitch is our solution !
 sudo apt install bbswitch-dkms
 
-sudo nano /etc/modules
-bbswitch load_state=0
+# --- outdated ---
+# sudo nano /etc/modules
+# bbswitch load_state=0
+# --- -------- ---
+
+# actual
+sudo nano /etc/modprobe.d/blacklist.conf
+options bbswitch load_state=0
 
 update-initramfs -u
+
+# check if every module loaded fine (including bbswitch) :
+cat /var/log/boot.log
 
 # LAST SPURT -> systemctl service for nvidia anihilation after hibernate
 sudo nano /etc/systemd/system/kill_nvidia.service
