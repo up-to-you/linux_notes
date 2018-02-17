@@ -73,6 +73,7 @@ sudo apt purge --auto-remove xserver-xorg-video-nouveau
 
 sudo nano /etc/modprobe.d/blacklist-nouveau.conf
 blacklist nouveau
+sudo echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
 
 sudo update-initramfs -u
 
