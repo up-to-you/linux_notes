@@ -16,7 +16,7 @@ GRUB_HIDDEN_TIMEOUT=0
 GRUB_HIDDEN_TIMEOUT_QUIET=false
 GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nouveau.modeset=0 acpi_rev_override=5"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash ipv6.disable=1 acpi_rev_override=5 nopti"
 GRUB_CMDLINE_LINUX=""
 # prevent grub menu showing up on boot for dual-boot
 # cos if os_prober detects another os - 
