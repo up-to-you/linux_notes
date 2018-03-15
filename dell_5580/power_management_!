@@ -53,10 +53,11 @@ ExecStart=/bin/sh -c "echo '\\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call; cat /p
 
 [Install]
 WantedBy=graphical.target
-Enable the new unit file:
+#Enable the new unit file:
 systemctl enable /usr/lib/systemd/user/dgpu-off.service
-source: https://gist.github.com/jseris/a740f6a3fb0d18064e26dc66f9be4f1d , tested with kernel: 4.9.20-040920-generic and 4.10.0-14-generic
-After a reboot cat /tmp/nvidia-off should report 0x0called and the idle temp should be about 10° lower.
+#source: https://gist.github.com/jseris/a740f6a3fb0d18064e26dc66f9be4f1d , tested with kernel: 4.9.20-040920-generic and 4.10.0-14-generic
+#After a reboot 
+#cat /tmp/nvidia-off should report 0x0called and the idle temp should be about 10° lower.
 
 # GRUB
 
@@ -121,6 +122,9 @@ WantedBy=hybrid-sleep.target
 sudo systemctl enable kill_nvidia.service
 
 systemctl status kill_nvidia.service
+
+# check currently active graphics card
+glxinfo | grep -i opengl
 
 #!
 # after the above adjustments the average energy consumption during coding / browsing / rare build tasks is about 8-9w/h
