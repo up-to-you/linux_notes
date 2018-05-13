@@ -15,3 +15,5 @@ WantedBy=multi-user.target
 
 # systemctl enable apple-keymap.service
 # systemctl status apple-keymap.service
+
+# note: key-repeat speed is inverse using Gnome
