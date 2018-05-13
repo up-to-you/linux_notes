@@ -1,0 +1,17 @@
+# for systemd
+# sudo nano /etc/systemd/system/apple-keymap.service 
+
+[Unit]
+Description=Apple Keymap
+
+[Service]
+User=root
+Group=root
+Type=oneshot
+ExecStart=/bin/sh -c "echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd && echo 2 > /sys/module/hid_apple/parameters/fnmode && echo 0 > /sys/module/hid_apple/parameters/iso_layout"
+
+[Install]
+WantedBy=multi-user.target
+
+# systemctl enable apple-keymap.service
+# systemctl status apple-keymap.service
