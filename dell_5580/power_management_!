@@ -129,3 +129,6 @@ glxinfo | grep -i opengl
 #!
 # after the above adjustments the average energy consumption during coding / browsing / rare build tasks is about 8-9w/h
 #!
+sudo nano /etc/default/tlp
+DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wwan"
+
