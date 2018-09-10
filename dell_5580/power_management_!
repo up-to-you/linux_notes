@@ -131,4 +131,7 @@ glxinfo | grep -i opengl
 #!
 sudo nano /etc/default/tlp
 DEVICES_TO_DISABLE_ON_STARTUP="bluetooth wwan"
-
+DEVICES_TO_DISABLE_ON_BAT="bluetooth wwan"
+USB_BLACKLIST_PRINTER=0
+USB_BLACKLIST_WWAN=0
+USB_WHITELIST="1d6b:0003 8087:0a2b 1bcf:2b96 1d6b:0002"
