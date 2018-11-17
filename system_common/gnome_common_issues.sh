@@ -6,3 +6,5 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['']"
 # https://launchpad.net/~nrbrtx/+archive/ubuntu/xorg-hotkeys
 # e.g. gnome-tweak-tools : switch source - alt + shift
 sudo add-apt-repository ppa:nrbrtx/xorg-hotkeys
+
+gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>s','Control_R']"
