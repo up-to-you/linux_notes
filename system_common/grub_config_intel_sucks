@@ -1,0 +1,12 @@
+# total list of flags to disable intel vulnerability protection
+# to increase CPU performance up to 50%
+#
+# nopti 
+# noibrs 
+# noibpb 
+# nospectre_v2 
+# nospec_store_bypass_disable
+#
+# https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown/MitigationControls
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=5 nopti noibrs noibpb nospectre_v2 nospec_store_bypass_disable ipv6.disable=1"
