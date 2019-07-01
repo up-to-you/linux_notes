@@ -9,4 +9,4 @@
 #
 # https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/SpectreAndMeltdown/MitigationControls
 
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=5 nopti noibrs noibpb nospectre_v2 nospec_store_bypass_disable ipv6.disable=1"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_rev_override=5 nopti noibrs noibpb nospectre_v2 nospectre_v1 nospec_store_bypass_disable ipv6.disable=1"
