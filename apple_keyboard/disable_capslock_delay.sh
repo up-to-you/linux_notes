@@ -19,5 +19,5 @@ echo 2 > /sys/module/hid_apple/parameters/fnmode
 echo 0 > /sys/module/hid_apple/parameters/iso_layout
 
 HIDDEVICE=$(dmesg | grep Apple | grep Keyboard | grep input0 | tail -1 | sed -e 's/.*hidraw\([[:digit:]]\+\).*/\/dev\/hidraw\1/')
-./disable-capslock-delay $HIDDEVICE >> /tmp/disable-capslock-delay-log
+/etc/disable-capslock-delay $HIDDEVICE >> /tmp/disable-capslock-delay-log
 ###################################################################################
