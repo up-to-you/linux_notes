@@ -8,3 +8,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['']"
 sudo add-apt-repository ppa:nrbrtx/xorg-hotkeys
 
 gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>s','Control_R']"
+
+# remove huge title bar for gnome-terminal
+gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
