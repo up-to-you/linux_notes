@@ -11,3 +11,9 @@ gsettings set org.gnome.shell.keybindings toggle-overview "['<Super>s','Control_
 
 # remove huge title bar for gnome-terminal
 gsettings set org.gnome.Terminal.Legacy.Settings headerbar false
+
+# disable default shortcuts for workspace switching
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['']" &&\
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['']" &&\
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['']" &&\
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['']"
