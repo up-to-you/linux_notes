@@ -96,6 +96,7 @@ ninja -C builddir/ && sudo ninja -C builddir/ install
 ```
 Verify location:
 ```shell
+sudo updatedb
 ll $(locate -A libinput.so)
 ```
 Logout / Login , use.
