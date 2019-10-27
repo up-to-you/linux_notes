@@ -86,7 +86,7 @@ libinput_event_pointer_get_axis_value_discrete(struct libinput_event_pointer *ev
 	return value;
 }
 ```
-Prepare build directory:
+Prepare build directory (dependencies installation required):
 ```shell
 meson --prefix=/usr builddir/ -Ddocumentation=false
 ```
