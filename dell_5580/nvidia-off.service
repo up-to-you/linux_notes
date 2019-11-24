@@ -1,0 +1,19 @@
+/etc/systemd/system/nvidia-off.service
+
+[Unit]
+Description=Nvidia_OFF 
+After=graphical.target
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+After=sleep.target
+
+[Service]
+ExecStart=/bin/sh -c "echo auto > /sys/bus/pci/devices/0000:01:00.0/power/control && echo '\\_SB.PCI0.PEG0.PEGP._OFF' > /proc/acpi/call; cat /proc/acpi/call > /tmp/nvidia-off"
+
+[Install]
+WantedBy=graphical.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target
+WantedBy=sleep.target
