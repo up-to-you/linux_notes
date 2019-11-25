@@ -1,3 +1,5 @@
+### NOT IN USE !!! REDUNDANT !!! CONFLICTS WITH nvidia-off.service !!!
+
 nano /usr/lib/systemd/user/nvidia-remove.service
 
 [Unit]
