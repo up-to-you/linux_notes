@@ -1,4 +1,4 @@
-/etc/systemd/system/nvidia-off.service
+nano /usr/lib/systemd/user/nvidia-off.service
 
 [Unit]
 Description=Nvidia_OFF 
@@ -17,3 +17,5 @@ WantedBy=suspend.target
 WantedBy=hibernate.target
 WantedBy=hybrid-sleep.target
 WantedBy=sleep.target
+
+systemctl enable /usr/lib/systemd/user/nvidia-off.service
