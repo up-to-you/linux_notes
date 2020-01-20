@@ -1,7 +1,7 @@
+sudo apt install --reinstall pulseaudio-module-bluetooth
+
 nano /etc/bluetooth/network.conf
 DisableSecurity=true
-
-sudo apt install --reinstall pulseaudio-module-bluetooth
 
 nano /etc/pulse/default.pa
 nano /etc/pulse/system.pa
