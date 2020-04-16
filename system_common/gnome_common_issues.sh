@@ -17,3 +17,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['']" &&\
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['']" &&\
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['']" &&\
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['']"
+
+
+# 20.04 (switching to another keyboard layout using CapsLock)
+gsettings set org.gnome.desktop.input-sources xkb-options "['grp:caps_toggle']"
