@@ -19,7 +19,8 @@ autoload -Uz compinit && compinit
 
 zstyle ':completion:*' menu select
 # zstyle ':completion:*:default' list-colors '${(s.:.)LS_COLORS}'
-zstyle ':completion:*' list-colors '=*=97' "ma=48;5;23;1"
+zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
+# zstyle ':completion:*' list-colors '=*=97' "ma=48;7;23"
 # zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")'
 # zstyle ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")'
 # zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS} "ma=48;5;153;1"
