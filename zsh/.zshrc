@@ -1,3 +1,8 @@
+# docker completion
+# ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion /usr/local/share/zsh/site-functions/_docker-machine
+# ln -s /Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
+# ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion /usr/local/share/zsh/site-functions/_docker-compose
+
 # PROMPT='%F{030}%n%f %F{042}%~%f -> '
 # PROMPT='%F{051}%~%f ❯ '
 PROMPT='%F{051}%~%f ❭ '
@@ -15,7 +20,7 @@ source /Users/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions
 fpath=(/Users/$USER/zsh-completions/src $fpath)
 # load completion module
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -i
 
 zstyle ':completion:*' menu select
 # zstyle ':completion:*:default' list-colors '${(s.:.)LS_COLORS}'
