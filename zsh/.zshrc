@@ -13,6 +13,10 @@ alias grep='grep --color=auto'
 export EDITOR=nano
 export VISUAL="$EDITOR"
 
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# for match_prev_cmd - check options, must be unset: 
+# unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
 # auto-suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # syntax-highlighting
