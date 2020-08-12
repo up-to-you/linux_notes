@@ -36,3 +36,7 @@ zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
 # LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
 # zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS} "ma=48;5;20;1"
 # zstyle ":completion:*:default" "ma=48;5;20;1"
+
+# fix for JetBrains terminal 
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
