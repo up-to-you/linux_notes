@@ -9,6 +9,7 @@ PROMPT='%F{051}%~%f ❭ '
 
 alias ll='ls -alG'
 alias grep='grep --color=auto'
+alias bat='bat -p --paging=never'
 
 export EDITOR=nano
 export VISUAL="$EDITOR"
@@ -37,6 +38,5 @@ zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
 # zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS} "ma=48;5;20;1"
 # zstyle ":completion:*:default" "ma=48;5;20;1"
 
-# fix for JetBrains terminal 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
