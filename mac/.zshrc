@@ -9,13 +9,14 @@ PROMPT='%F{051}%~%f ❭ '
 
 alias ll='ls -alG'
 alias grep='grep --color=auto'
-alias bat='bat -p --paging=never'
+alias bat="bat -p --paging=never --theme='Solarized (dark)'"
 
 export EDITOR=nano
 export VISUAL="$EDITOR"
+export PYTHONPATH=/usr/local/bin/python3
 
 ZSH_AUTOSUGGEST_USE_ASYNC=1
-# for match_prev_cmd - check options, must be unset: 
+# for match_prev_cmd - check options, must be unset:
 # unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
 # auto-suggestions
