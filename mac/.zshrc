@@ -9,7 +9,7 @@ PROMPT='%F{051}%~%f ❭ '
 
 alias ll='ls -alG'
 alias grep='grep --color=auto'
-alias bat="bat -p --paging=never --theme='Solarized (dark)'"
+alias bat="bat -p --paging=never --theme='Monokai Extended Bright'"
 
 export EDITOR=nano
 export VISUAL="$EDITOR"
@@ -21,8 +21,11 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
 # auto-suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # syntax-highlighting
+#
 source /Users/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # zsh-completions
 fpath=(/Users/$USER/zsh-completions/src $fpath)
 # load completion module
@@ -41,3 +44,5 @@ zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
