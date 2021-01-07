@@ -1,0 +1,51 @@
+stty -ixon -ixoff
+
+export LANG="en_US.UTF-8"
+
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+PROMPT='%F{051}%~%f ❭ '
+
+alias ll='ls -alG'
+alias grep='grep --color=auto'
+alias bat="bat --paging=never --theme='Monokai Extended Bright'"
+alias btm="btm -a -r 700 --mem_as_value=true"
+
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+export PYTHONPATH=/usr/local/bin/python3
+
+# auto-suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# for match_prev_cmd - check options, must be unset: unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-autocomplete (async)
+zstyle ':completion:*' verbose no
+zstyle ':completion:*:complete:*:' tag-order \
+  '! recent-directories recent-files options values history-words' -
+
+zstyle ':completion:*:complete:*:' group-order \
+  local-directories files
+
+zstyle ':autocomplete:tab:*' widget-style menu-complete
+source /Users/$USER/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# syntax-highlighting
+# source /Users/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zsh-completions
+# fpath=(/Users/$USER/zsh-completions/src $fpath)
+# load completion module
+# autoload -Uz compinit && compinit -i
+
+# zstyle ':completion:*' menu select
+# zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
+export PATH=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home/bin:$PATH
+export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home
+export JAVA_HOME=$GRAALVM_HOME
+
