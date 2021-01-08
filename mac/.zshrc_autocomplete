@@ -2,11 +2,6 @@ stty -ixon -ixoff
 
 export LANG="en_US.UTF-8"
 
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
 PROMPT='%F{051}%~%f ❭ '
 
 alias ll='ls -alG'
@@ -18,11 +13,18 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PYTHONPATH=/usr/local/bin/python3
 
-# auto-suggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-# for match_prev_cmd - check options, must be unset: unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
-ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey "${key[Home]}" beginning-of-line
+bindkey "${key[End]}" end-of-line
+bindkey "\033[1;3C" forward-word
+bindkey "\033[1;3D" backward-word
+# forward / backward
+bindkey -r "^[b"
+bindkey -r "^[B"
+bindkey -r "^[f"
+bindkey -r "^[F"
+# home / end
+bindkey -r "^A"
+bindkey -r "^E"
 
 # zsh-autocomplete (async)
 zstyle ':completion:*' verbose no
@@ -30,10 +32,16 @@ zstyle ':completion:*:complete:*:' tag-order \
   '! recent-directories recent-files options values history-words' -
 
 zstyle ':completion:*:complete:*:' group-order \
-  local-directories files
+  local-directories files builtins
 
 zstyle ':autocomplete:tab:*' widget-style menu-complete
 source /Users/$USER/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+# auto-suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# for match_prev_cmd - check options, must be unset: unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # syntax-highlighting
 # source /Users/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -48,4 +56,3 @@ source /Users/$USER/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 export PATH=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home/bin:$PATH
 export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home
 export JAVA_HOME=$GRAALVM_HOME
-
