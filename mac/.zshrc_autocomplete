@@ -56,3 +56,4 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home/bin:$PATH
 export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home
 export JAVA_HOME=$GRAALVM_HOME
+
