@@ -43,12 +43,6 @@ bindkey -r "^E"
 # zstyle ':autocomplete:*' default-context history-incremental-search-backward
 # source /Users/$USER/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# auto-suggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-# for match_prev_cmd - check options, must be unset: unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
-ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
-source /Users/$USER/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # syntax-highlighting
 # source /Users/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ##########
@@ -60,11 +54,17 @@ autoload -Uz compinit && compinit -i
 source /Users/$USER/fzf-tab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:*' continuous-trigger 'space'
 zstyle ':completion:complete:*:options' sort false
-
+##########
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # zstyle ':fzf-tab:complete:bat:*' fzf-preview 'bat -p $word'
 ##########
 # zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+
+# auto-suggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+# for match_prev_cmd - check options, must be unset: unsetopt | grep -e "histexpiredupsfirst\|histignoredups\|histignorealldups"
+ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd)
+source /Users/$USER/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zstyle ':completion:*' menu select
 # zstyle ':completion:*' list-colors '=*=97' "ma=38;5;195;7"
@@ -72,3 +72,4 @@ zstyle ':completion:complete:*:options' sort false
 export PATH=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home/bin:$PATH
 export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-ce-java11-20.3.0/Contents/Home
 export JAVA_HOME=$GRAALVM_HOME
+
